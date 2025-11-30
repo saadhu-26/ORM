@@ -24,13 +24,31 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+'''
+models.py
 
+from django.db import models 
+from django.contrib import admin
+class amazon_DB (models.Model):
+     Product_name=models.CharField(max_length=20)
+     S_no=models.IntegerField (primary_key=True)
+     Product_type=models.CharField(max_length=20)
+     Price=models.CharField(max_length=20)
+     Year=models.IntegerField()
+class amazon_DBAdmin(admin.ModelAdmin):
+     list_display=["Product_name","S_no","Product_type","Price","Year"]
 
+admin.py
+
+from django.contrib import admin
+from .models import amazon_DB,amazon_DBAdmin
+admin.site.register(amazon_DB,amazon_DBAdmin)
+
+'''
 
 ## OUTPUT
 
-Include the screenshot of your admin page.
-
+<img width="1428" height="718" alt="Screenshot 2025-11-30 at 4 35 10 PM" src="https://github.com/user-attachments/assets/f8da0321-87bb-4403-afac-085926e53f6f" />
 
 ## RESULT
 Thus the program for creating E-commerce website database using ORM hass been executed successfully
