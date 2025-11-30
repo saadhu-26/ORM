@@ -24,7 +24,7 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-'''
+```
 models.py
 
 from django.db import models 
@@ -44,7 +44,7 @@ from django.contrib import admin
 from .models import amazon_DB,amazon_DBAdmin
 admin.site.register(amazon_DB,amazon_DBAdmin)
 
-'''
+```
 
 ## OUTPUT
 
